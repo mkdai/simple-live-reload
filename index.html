@@ -6,13 +6,18 @@
 
   <!-- Vendor Assets -->
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
-    <!-- Test Cases Styles -->
+
+  <!-- Test Cases Styles -->
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="vendor/mocha/mocha.css">
 
   <!-- Authored Assets -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <script src="assets/js/main.js"></script>
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('main.js');
+  </script>
   <script src="vendor/jquery/dist/jquery.js"></script>
   <script src="vendor/underscore/underscore.js"></script>
 </head>
@@ -26,7 +31,7 @@
   </div>
     <script src="vendor/mocha/mocha.js"></script>
     <script src="vendor/chai/chai.js"></script>
-     <script>
+    <script>
       mocha.setup({
         'ui': 'bdd',
         'bail': true
@@ -38,7 +43,7 @@
         window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
       });
     </script>
-     <script src="assets/js/problem.js"></script>
+    <script src="assets/js/problem.js"></script>
     <script src="assets/js/testCase.js"></script>
 </body>
 </html>
