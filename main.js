@@ -1,0 +1,1 @@
+import * as example from './assets/js/example';
